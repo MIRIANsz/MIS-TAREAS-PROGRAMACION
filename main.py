@@ -1,1 +1,0 @@
-print(Se ha creado un nuevo archivo para sincornizar en GITHUB)
