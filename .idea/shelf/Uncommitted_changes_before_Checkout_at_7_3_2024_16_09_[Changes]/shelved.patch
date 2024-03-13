@@ -1,0 +1,28 @@
+Index: SEMANA 12.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import numpy as np\r\n\r\ndef calcular_temperatura_promedio(ciudades, dias_semana, semanas, matriz_temperaturas):\r\n    \"\"\"\r\n    Calcula la temperatura promedio por ciudad y semana.\r\n\r\n    Parameters:\r\n    - ciudades (list): Lista de nombres de ciudades.\r\n    - dias_semana (list): Lista de días de la semana.\r\n    - semanas (list): Lista de semanas.\r\n    - matriz_temperaturas (numpy.ndarray): Matriz 3D con las temperaturas de cada ciudad, día y semana.\r\n\r\n    Returns:\r\n    - promedios (numpy.ndarray): Matriz con los promedios de temperatura por ciudad y semana.\r\n    \"\"\"\r\n\r\n    # Calcular el promedio de temperaturas por ciudad y semana\r\n    promedios = np.mean(matriz_temperaturas, axis=1)\r\n\r\n    # Mostrar el promedio de temperaturas para cada ciudad y semana\r\n    for i, ciudad in enumerate(ciudades):\r\n        print(f\"\\nPromedio de temperaturas para {ciudad}:\")\r\n        for j, semana in enumerate(semanas):\r\n            promedio_semana = promedios[i, j]\r\n            print(f\"{semana}: {promedio_semana:.2f}°C\")\r\n\r\n    return promedios\r\n\r\n# Ejemplo de uso\r\nciudades = ['Ciudad A', 'Ciudad B', 'Ciudad C']\r\ndias_semana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']\r\nsemanas = ['Semana 1', 'Semana 2', 'Semana 3']\r\n\r\n# Crear una matriz 3D para almacenar las temperaturas\r\nmatriz_temperaturas = np.random.randint(20, 30, size=(len(ciudades), len(dias_semana), len(semanas)))\r\n\r\n# Llamar a la función para calcular y mostrar los promedios de temperatura\r\ncalcular_temperatura_promedio(ciudades, dias_semana, semanas, matriz_temperaturas)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SEMANA 12.py b/SEMANA 12.py
+--- a/SEMANA 12.py	(revision 50093b11d6ec95f59f3a80df0d1f00b0893365f0)
++++ b/SEMANA 12.py	(date 1709845717987)
+@@ -1,4 +1,4 @@
+-import numpy as np
++
+ 
+ def calcular_temperatura_promedio(ciudades, dias_semana, semanas, matriz_temperaturas):
+     """
+Index: TAREAS.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/TAREAS.py b/TAREAS.py
+new file mode 100644
+--- /dev/null	(date 1709838893527)
++++ b/TAREAS.py	(date 1709838893527)
+@@ -0,0 +1,1 @@
++print("Se ha creado un nuevo archivo para sincronizar con GITHUB")
+\ No newline at end of file
