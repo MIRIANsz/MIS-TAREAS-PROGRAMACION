@@ -3,7 +3,7 @@ def calcular_descuento(subtotal, descuento = 35):
     return monto_descuento
 
 valor_subtotal = 1000
-porcentaje_descuento = 35
+porcentaje_descuesto = 35
 
 valor_descuento = calcular_descuento(valor_subtotal)
 valor_total = valor_subtotal - valor_descuento
